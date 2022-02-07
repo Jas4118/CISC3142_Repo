@@ -1,2 +1,1 @@
 Hi this is a file created for the biography. My name is Jason Li, I am a computer science major currently at Brooklyn college. Currently I am simply trying to become a software developer and really trying to work towards a hobby of keyboard building.
-
