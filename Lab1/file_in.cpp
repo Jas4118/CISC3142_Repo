@@ -46,7 +46,7 @@ int findAvgBrand(vector<string> vBrand,vector<string> vPrice, ofstream &out_stre
     while(getline(ps,m,',')){//changing string to float
       stringstream w(m);
       w>>temp;
-      //adding totalSum and itterating totalNum for a certain key brand
+      //adding totalSum and iterating totalNum for a certain key brand
       totalSum=totalSum+temp;
       totalNum=totalNum+1.0;
     }
