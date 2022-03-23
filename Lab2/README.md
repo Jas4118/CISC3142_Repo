@@ -1,7 +1,7 @@
 # CISC 3142 Lab 2 Jason Li
 # Professor Katherine Chuang
 This is a calculator program. 
-At first I was thinking of using two stacks to hold the numbers and operators, but I saw there was an easier solution in making it in postfix notation and then parsing the string.
+At first I was thinking of using two stacks to hold the numbers and operators, but I was told there was an easier solution in making it in postfix notation and then parsing the string.
 While making the program I found it difficult dealing with strings in C++ and due to time constraints not allowing me to, I ended up not including several features.
 One of issues is that this program doesn't allow float points or whitespace in the input. I've added an image including test cases due to my console having issues copying from it.
 What the program does is that it sets the user input 'equation' into a postfix notation string with whitespace inbetween each using a method called changeToPost. changeToPost sorts the string by going through each character and checking by priority whether its a number.
