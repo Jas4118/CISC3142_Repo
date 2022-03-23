@@ -1,4 +1,5 @@
 # CISC 3142 Lab 2 Jason Li
+# Professor Katherine Chuang
 This is a calculator program. 
 At first I was thinking of using two stacks to hold the numbers and operators, but I saw there was an easier solution in making it in postfix notation and then parsing the string.
 While making the program I found it difficult dealing with strings in C++ and due to time constraints not allowing me to, I ended up not including several features.
