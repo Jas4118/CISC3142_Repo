@@ -1,3 +1,7 @@
+//Jason Li CISC3142
+//Professor Katherine Chuang
+//Lab2
+
 #include <iostream>
 #include <stack>
 #include <locale>
