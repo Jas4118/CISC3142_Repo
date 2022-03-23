@@ -5,17 +5,42 @@
 #include <math.h>
 using namespace std;
 struct Calculator{
+
 };
 
-int orderOfOp(char ch) {
-   	if(ch == '+' || ch == '-') 
-      		return 1;          
-   	if(ch == '*' || ch == '/') 
-      		return 2;           
-   	if(ch == '^') {
-      		return 3;           
-   	}
+int orderOfOp(char op) {
+	if(op == '^'){
+		return 3;
+	}
+	if(op == '*' || op == '/'){
+		return 2;
+	}
+   	if(op == '+' || op == '-'){
+      		return 1;                     
+	}
       	return 0;	
+}
+
+int calcTwo(int a, int b, char op){
+	int answer;
+	switch (op) {
+		case '+':
+			answer = b + a;
+			break;
+		case '-':
+			answer = b - a;
+			break;
+		case '*':
+			answer = b * a;
+			break;
+		case '/':
+			answer = b / a;
+			break;
+		case '^':
+			answer = pow(b , a);
+			break;
+	}
+	return answer;
 }
 
 string changeToPost(string s){
@@ -111,8 +136,8 @@ int calcPost(string postfix){
 			num.pop();
 			int b = num.top();
 			num.pop();
-
-			switch (*it) {
+			answer = calcTwo(a,b,*it);
+			/*switch (*it) {
 				case '+':
 					answer = b + a;
 					break;
@@ -128,7 +153,7 @@ int calcPost(string postfix){
 				case '^':
 					answer = pow(b , a);
 					break;
-			}
+			}*/
 
 			num.push(answer);
 
@@ -147,9 +172,10 @@ int main() {
 
 		if(equation == "q"){
 			qEnter=false;
+			break;
 		}
-		cout << "Equation is " << equation;
-		cout << " "<<changeToPost(equation) << endl;
+		cout << "Equation is " << equation << endl;
+		cout << "Postfix notation: "<<changeToPost(equation) << endl;
 		cout << "Evaluation result: " <<calcPost(changeToPost(equation))<<endl;
 	}
 }
